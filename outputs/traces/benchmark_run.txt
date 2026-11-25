@@ -1,0 +1,87 @@
+1) Sorting ...
+2) Knapsack ...
+3) Dijkstra ...
+4) TSP ...
+5) Pipeline ...
+  sorting           Merge Sort                       100      0.2004
+  sorting           Quick Sort                       100      0.3024
+  sorting           Insertion Sort                   100      0.4046
+  sorting           Merge Sort                       500      1.3306
+  sorting           Quick Sort                       500      2.0757
+  sorting           Insertion Sort                   500     12.1698
+  sorting           Merge Sort                      1000      2.9138
+  sorting           Quick Sort                      1000       4.981
+  sorting           Insertion Sort                  1000     45.9278
+  sorting           Merge Sort                      2000      6.5363
+  sorting           Quick Sort                      2000     11.5342
+  sorting           Insertion Sort                  2000    179.7285
+  sorting           Merge Sort                      4000      15.279
+  sorting           Quick Sort                      4000     25.2962
+  sorting           Insertion Sort                  4000    801.9306
+  knapsack          DP full table O(nW)               50      0.9314
+  knapsack          DP 1-D array O(W) space           50      1.2021
+  knapsack          Greedy ratio                      50      0.0105
+  knapsack_quality  greedy % of optimal               50       99.88
+  knapsack          DP full table O(nW)              100      1.6857
+  knapsack          DP 1-D array O(W) space          100       2.272
+  knapsack          Greedy ratio                     100       0.034
+  knapsack_quality  greedy % of optimal              100       99.88
+  knapsack          DP full table O(nW)              200      3.2043
+  knapsack          DP 1-D array O(W) space          200      4.8826
+  knapsack          Greedy ratio                     200      0.0673
+  knapsack_quality  greedy % of optimal              200       99.45
+  knapsack          DP full table O(nW)              400     10.3738
+  knapsack          DP 1-D array O(W) space          400      9.5759
+  knapsack          Greedy ratio                     400      0.0682
+  knapsack_quality  greedy % of optimal              400       99.96
+  knapsack          DP full table O(nW)              800     15.6961
+  knapsack          DP 1-D array O(W) space          800     16.8723
+  knapsack          Greedy ratio                     800      0.1792
+  knapsack_quality  greedy % of optimal              800       99.71
+  knapsack_capacity DP n=300                          50      1.1095
+  knapsack_capacity DP n=300                         100      2.1781
+  knapsack_capacity DP n=300                         200      5.2598
+  knapsack_capacity DP n=300                         400     12.0173
+  knapsack_capacity DP n=300                         800     43.3697
+  dijkstra          V=500,E=1999                     500      0.9509
+  dijkstra          V=1000,E=3999                   1000      1.6612
+  dijkstra          V=2000,E=7999                   2000        4.14
+  dijkstra          V=5000,E=19999                  5000     20.6446
+  dijkstra          V=10000,E=39999                10000     36.7549
+  tsp               Nearest neighbour                 10      0.0126
+  tsp               2-opt                             10      0.0452
+  tsp_gain          2-opt % shorter                   10        7.66
+  tsp               Nearest neighbour                 25      0.0835
+  tsp               2-opt                             25      1.0276
+  tsp_gain          2-opt % shorter                   25       11.87
+  tsp               Nearest neighbour                 50      0.1884
+  tsp               2-opt                             50      1.3365
+  tsp_gain          2-opt % shorter                   50        9.63
+  tsp               Nearest neighbour                100      0.7332
+  tsp               2-opt                            100      4.7921
+  tsp_gain          2-opt % shorter                  100       14.64
+  tsp               Nearest neighbour                200      6.6939
+  tsp               2-opt                            200     46.0725
+  tsp_gain          2-opt % shorter                  200       17.43
+  tsp_ratio         NN / optimal (avg of 5)            4      1.0177
+  tsp_ratio         NN / optimal (avg of 5)            5      1.0207
+  tsp_ratio         NN / optimal (avg of 5)            6      1.1371
+  tsp_ratio         NN / optimal (avg of 5)            7      1.0859
+  tsp_ratio         NN / optimal (avg of 5)            8       1.068
+  tsp_ratio         NN / optimal (avg of 5)            9      1.1123
+  pipeline          Sorting (Merge Sort)           small      0.0201
+  pipeline          Knapsack DP                    small      0.0255
+  pipeline          Dijkstra (all stops)           small      0.1354
+  pipeline          NN-TSP route                   small      0.0109
+  pipeline          2-opt improvement              small      0.0076
+  pipeline          Sorting (Merge Sort)          medium      0.0751
+  pipeline          Knapsack DP                   medium      0.2773
+  pipeline          Dijkstra (all stops)          medium      1.9217
+  pipeline          NN-TSP route                  medium      0.0741
+  pipeline          2-opt improvement             medium      0.2051
+  pipeline          Sorting (Merge Sort)           large      0.8697
+  pipeline          Knapsack DP                    large      3.4878
+  pipeline          Dijkstra (all stops)           large     51.0622
+  pipeline          NN-TSP route                   large      0.2893
+  pipeline          2-opt improvement              large      1.1361
+charts saved in outputs/charts/

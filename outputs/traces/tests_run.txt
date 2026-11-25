@@ -1,0 +1,14 @@
+test_dijkstra_distances (tests.test_algorithms.TestGraph.test_dijkstra_distances) ... ok
+test_unreachable_node (tests.test_algorithms.TestGraph.test_unreachable_node) ... ok
+test_classic_example (tests.test_algorithms.TestKnapsack.test_classic_example) ... ok
+test_dp_equals_brute_force (tests.test_algorithms.TestKnapsack.test_dp_equals_brute_force) ... ok
+test_greedy_never_beats_dp (tests.test_algorithms.TestKnapsack.test_greedy_never_beats_dp) ... ok
+test_all_sorters_match_python_sorted (tests.test_algorithms.TestSorting.test_all_sorters_match_python_sorted) ... ok
+test_earliest_deadline_first_then_priority (tests.test_algorithms.TestSorting.test_earliest_deadline_first_then_priority) ... ok
+test_merge_sort_is_stable (tests.test_algorithms.TestSorting.test_merge_sort_is_stable) ... ok
+test_tour_is_valid_and_close_to_optimal (tests.test_algorithms.TestTSP.test_tour_is_valid_and_close_to_optimal) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.034s
+
+OK

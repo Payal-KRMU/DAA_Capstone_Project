@@ -1,0 +1,131 @@
+==============================================================================
+MINI-COURIER PLANNER - OUTPUT TRACE
+==============================================================================
+
+[PHASE 2-A] PARCELS SORTED BY (deadline ASC, priority DESC) - Merge Sort
+  # ID    Dest   Wt(kg)  Value Deadline(h) Priority  Score
+  1 P013  N10        12     79           1        5    129
+  2 P019  N32         6     13           1        3     43
+  3 P035  N53        14     37           1        3     67
+  4 P002  N31        11     61           1        2     81
+  5 P033  N1         13     93           2        5    143
+  6 P005  N37         3     78           2        3    108
+  7 P010  N20         2     28           2        3     58
+  8 P004  N22        10     16           2        1     26
+  9 P008  N39         6     70           2        1     80
+ 10 P029  N48         2     30           3        2     50
+ 11 P003  N5          4     66           3        1     76
+ 12 P032  N10         9     80           3        1     90
+ 13 P006  N40         1     19           4        5     69
+ 14 P018  N48        13     39           4        5     89
+ 15 P036  N14         5     74           4        5    124
+ 16 P017  N40        13     34           4        4     74
+ 17 P007  N25         3     91           5        3    121
+ 18 P015  N34         6     31           6        2     51
+ 19 P016  N35         9     74           6        2     94
+ 20 P021  N23         8     54           6        1     64
+ 21 P027  N28        13     91           6        1    101
+ 22 P039  N53        15     76           7        5    126
+ 23 P034  N48        15     27           7        2     47
+ 24 P037  N21         5     79           7        2     99
+ 25 P001  N26         7     61           7        1     71
+ 26 P038  N4         15     55           8        5    105
+ 27 P009  N55         8     69           8        4    109
+ 28 P028  N52        12     60           8        4    100
+ 29 P031  N40        14     86           8        3    116
+ 30 P022  N15         2     39           8        2     59
+ 31 P026  N59         7     35           8        2     55
+ 32 P030  N2          3     85           8        2    105
+ 33 P040  N9          9     29           9        5     79
+ 34 P012  N34         1     36           9        3     66
+ 35 P023  N22         4     71          10        5    121
+ 36 P024  N54         1     71          11        3    101
+ 37 P025  N52        11     20          11        1     30
+ 38 P020  N31         5     34          12        5     84
+ 39 P014  N20        11     21          12        3     51
+ 40 P011  N48         5     71          12        2     91
+Score = value + 10 x priority (used as the knapsack value)
+
+[PHASE 2-B] 0/1 KNAPSACK (Dynamic Programming)  capacity = 80 kg
+Selected parcels (19): P033, P005, P010, P008, P029, P003, P006, P036, P007, P037, P001, P009, P022, P030, P012, P023, P024, P020, P011
+Total weight = 80 / 80 kg   Total score = 1735   (revenue value = 1165)
+Packing plan (load in REVERSE delivery order so first drop is at the door):
+   slot  1: P006 -> N40  [1 kg]
+   slot  2: P003 -> N5  [4 kg]
+   slot  3: P008 -> N39  [6 kg]
+   slot  4: P036 -> N14  [5 kg]
+   slot  5: P023 -> N22  [4 kg]
+   slot  6: P024 -> N54  [1 kg]
+   slot  7: P012 -> N34  [1 kg]
+   slot  8: P001 -> N26  [7 kg]
+   slot  9: P029 -> N48  [2 kg]
+   slot 10: P011 -> N48  [5 kg]
+   slot 11: P009 -> N55  [8 kg]
+   slot 12: P037 -> N21  [5 kg]
+   slot 13: P020 -> N31  [5 kg]
+   slot 14: P022 -> N15  [2 kg]
+   slot 15: P005 -> N37  [3 kg]
+   slot 16: P007 -> N25  [3 kg]
+   slot 17: P033 -> N1  [13 kg]
+   slot 18: P010 -> N20  [2 kg]
+   slot 19: P030 -> N2  [3 kg]
+Deferred to next trip: P013, P019, P035, P002, P004, P032, P018, P017, P015, P016, P021, P027, P039, P034, P038, P028, P031, P026, P040, P025, P014
+
+[PHASE 3-A] DIJKSTRA - shortest paths from depot D
+   N1      21.80 km   path: D -> N1
+   N14     24.10 km   path: D -> N56 -> N38 -> N19 -> N14
+   N15      9.30 km   path: D -> N32 -> N15
+   N2       6.70 km   path: D -> N2
+   N20     11.80 km   path: D -> N2 -> N20
+   N21     23.50 km   path: D -> N32 -> N18 -> N21
+   N22     21.10 km   path: D -> N56 -> N38 -> N19 -> N22
+   N25     31.50 km   path: D -> N32 -> N15 -> N24 -> N11 -> N25
+   N26     13.90 km   path: D -> N56 -> N34 -> N26
+   N31     17.40 km   path: D -> N32 -> N18 -> N31
+   N34      8.70 km   path: D -> N56 -> N34
+   N37     19.60 km   path: D -> N32 -> N15 -> N24 -> N37
+   N39     24.00 km   path: D -> N3 -> N39
+   N40     46.30 km   path: D -> N3 -> N4 -> N5 -> N40
+   N48     20.30 km   path: D -> N6 -> N48
+   N5      41.40 km   path: D -> N3 -> N4 -> N5
+   N54     17.40 km   path: D -> N56 -> N38 -> N54
+   N55     31.10 km   path: D -> N32 -> N18 -> N21 -> N55
+
+[PHASE 3-B] SHORTEST-DISTANCE MATRIX BETWEEN STOPS (km)
+   (19 stops - matrix omitted from trace)
+
+[PHASE 3-C] DELIVERY ROUTE
+Nearest-Neighbour tour : D -> N2 -> N15 -> N20 -> N1 -> N25 -> N37 -> N31 -> N21 -> N55 -> N26 -> N34 -> N54 -> N22 -> N14 -> N39 -> N5 -> N40 -> N48 -> D   = 275.80 km
+Final tour (after 2-opt): D -> N2 -> N20 -> N1 -> N25 -> N37 -> N15 -> N31 -> N21 -> N55 -> N48 -> N26 -> N34 -> N54 -> N22 -> N14 -> N39 -> N5 -> N40 -> D   = 244.40 km
+Full road path         : D -> N2 -> N20 -> N52 -> N1 -> N10 -> N25 -> N11 -> N37 -> N24 -> N15 -> N18 -> N31 -> N21 -> N55 -> N58 -> N33 -> N8 -> N6 -> N48 -> N6 -> N26 -> N34 -> N38 -> N54 -> N22 -> N14 -> N3 -> N39 -> N4 -> N5 -> N40 -> N5 -> N4 -> N3 -> D
+
+[PHASE 3-D] DELIVERY SCHEDULE & DEADLINE CHECK
+Parcel  Stop                          Cum km Arrive(h) Deadline  Status
+P030    N2                              6.70      0.22        8  ON TIME
+P010    N20                            11.80      0.49        2  ON TIME
+P033    N1                             28.20      1.14        2  ON TIME
+P007    N25                            47.30      1.88        5  ON TIME
+P005    N37                            59.20      2.37        2  LATE
+P022    N15                            69.50      2.82        8  ON TIME
+P020    N31                            80.80      3.29       12  ON TIME
+P037    N21                            87.70      3.62        7  ON TIME
+P009    N55                            95.30      3.98        8  ON TIME
+P029    N48                           134.40      5.38        3  LATE
+P011    N48                           134.40      5.38       12  ON TIME
+P001    N26                           142.00      5.73        7  ON TIME
+P012    N34                           147.20      6.01        9  ON TIME
+P024    N54                           156.40      6.41       11  ON TIME
+P023    N22                           162.40      6.71       10  ON TIME
+P036    N14                           165.50      6.92        4  LATE
+P008    N39                           175.20      7.34        2  LATE
+P003    N5                            193.20      8.04        3  LATE
+P006    N40                           198.10      8.30        4  LATE
+On-time deliveries: 13/19
+
+[PHASE 4] RUNTIME OF MAJOR STEPS
+   Sorting (Merge Sort)         0.149 ms
+   Knapsack DP                  0.354 ms
+   Dijkstra (all stops)         3.554 ms
+   NN-TSP route                 0.051 ms
+   2-opt improvement            0.112 ms
+==============================================================================

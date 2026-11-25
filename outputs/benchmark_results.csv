@@ -1,0 +1,82 @@
+experiment,variant,input_size,time_ms_or_metric
+sorting,Merge Sort,100,0.7385
+sorting,Quick Sort,100,0.7314
+sorting,Insertion Sort,100,1.051
+sorting,Merge Sort,500,3.3633
+sorting,Quick Sort,500,4.9204
+sorting,Insertion Sort,500,25.929
+sorting,Merge Sort,1000,7.7077
+sorting,Quick Sort,1000,11.6033
+sorting,Insertion Sort,1000,103.3811
+sorting,Merge Sort,2000,15.0703
+sorting,Quick Sort,2000,23.3932
+sorting,Insertion Sort,2000,443.5583
+sorting,Merge Sort,4000,33.0534
+sorting,Quick Sort,4000,49.1009
+sorting,Insertion Sort,4000,1559.3535
+knapsack,DP full table O(nW),50,2.3188
+knapsack,DP 1-D array O(W) space,50,6.4227
+knapsack,Greedy ratio,50,0.0514
+knapsack_quality,greedy % of optimal,50,99.88
+knapsack,DP full table O(nW),100,6.3879
+knapsack,DP 1-D array O(W) space,100,6.8332
+knapsack,Greedy ratio,100,0.0543
+knapsack_quality,greedy % of optimal,100,99.88
+knapsack,DP full table O(nW),200,7.6319
+knapsack,DP 1-D array O(W) space,200,12.2911
+knapsack,Greedy ratio,200,0.1023
+knapsack_quality,greedy % of optimal,200,99.45
+knapsack,DP full table O(nW),400,15.0955
+knapsack,DP 1-D array O(W) space,400,23.2539
+knapsack,Greedy ratio,400,0.202
+knapsack_quality,greedy % of optimal,400,99.96
+knapsack,DP full table O(nW),800,29.5832
+knapsack,DP 1-D array O(W) space,800,43.0058
+knapsack,Greedy ratio,800,0.3891
+knapsack_quality,greedy % of optimal,800,99.71
+knapsack_capacity,DP n=300,50,2.7343
+knapsack_capacity,DP n=300,100,5.5756
+knapsack_capacity,DP n=300,200,11.3412
+knapsack_capacity,DP n=300,400,25.5468
+knapsack_capacity,DP n=300,800,60.2672
+dijkstra,"V=500,E=1999",500,1.459
+dijkstra,"V=1000,E=3999",1000,3.1659
+dijkstra,"V=2000,E=7999",2000,7.6539
+dijkstra,"V=5000,E=19999",5000,22.3695
+dijkstra,"V=10000,E=39999",10000,49.7237
+tsp,Nearest neighbour,10,0.0246
+tsp,2-opt,10,0.0779
+tsp_gain,2-opt % shorter,10,7.66
+tsp,Nearest neighbour,25,0.127
+tsp,2-opt,25,0.5281
+tsp_gain,2-opt % shorter,25,11.87
+tsp,Nearest neighbour,50,0.3799
+tsp,2-opt,50,2.5883
+tsp_gain,2-opt % shorter,50,9.63
+tsp,Nearest neighbour,100,1.4723
+tsp,2-opt,100,10.8709
+tsp_gain,2-opt % shorter,100,14.64
+tsp,Nearest neighbour,200,5.6903
+tsp,2-opt,200,51.4265
+tsp_gain,2-opt % shorter,200,17.43
+tsp_ratio,NN / optimal (avg of 5),4,1.0177
+tsp_ratio,NN / optimal (avg of 5),5,1.0207
+tsp_ratio,NN / optimal (avg of 5),6,1.1371
+tsp_ratio,NN / optimal (avg of 5),7,1.0859
+tsp_ratio,NN / optimal (avg of 5),8,1.068
+tsp_ratio,NN / optimal (avg of 5),9,1.1123
+pipeline,Sorting (Merge Sort),small,0.0415
+pipeline,Knapsack DP,small,0.062
+pipeline,Dijkstra (all stops),small,0.2839
+pipeline,NN-TSP route,small,0.0175
+pipeline,2-opt improvement,small,0.0115
+pipeline,Sorting (Merge Sort),medium,0.1601
+pipeline,Knapsack DP,medium,0.6771
+pipeline,Dijkstra (all stops),medium,2.8659
+pipeline,NN-TSP route,medium,0.0688
+pipeline,2-opt improvement,medium,0.242
+pipeline,Sorting (Merge Sort),large,1.3705
+pipeline,Knapsack DP,large,7.1219
+pipeline,Dijkstra (all stops),large,54.6738
+pipeline,NN-TSP route,large,0.3743
+pipeline,2-opt improvement,large,2.0262
